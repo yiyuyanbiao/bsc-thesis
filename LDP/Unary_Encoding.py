@@ -31,7 +31,7 @@ class Unary_Encoding_client():
 	def perturb(self, ret):
 		B = ret
 
-		new_B = B
+		perturb_B = B
 		# for each bit of the binary array
 		for i in range(len(B)):
     		# depending on wether it is 0 or 1
@@ -43,11 +43,11 @@ class Unary_Encoding_client():
 			res = random.random()
 			# in order to determine the bit in the new array
 			if res < pr:
-				new_B[i] = 1
+				perturb_B[i] = 1
 			else:
-				new_B[i] = 0
+				perturb_B[i] = 0
 		
-		return new_B
+		return perturb_B
 
 	# randomization consists of perturbing the encoded value
 	def randomize(self, v):
